@@ -13,6 +13,9 @@ Tag.init(
       primaryKey:true, 
       autoIncrement: true//auto increase
     }, 
+    tag_name: {
+      type: DataTypes.STRING,
+    }
   },
   {
     sequelize,
