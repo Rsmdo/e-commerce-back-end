@@ -5,6 +5,7 @@
 
   ## Description 
   This project works on the backend of an ecommerce website. Using mysql database and ORM. 
+  A walk through video demonstrating how the challenge works can be found <a href="https://drive.google.com/drive/folders/1o3t3KHd95JU1kVeLIwSYN6I9nlbU0BXW?usp=sharing">here</a>.
 
   ## Table of Contents
   - [Installation](#installation)
