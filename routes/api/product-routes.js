@@ -160,7 +160,7 @@ router.delete('/:id', (req, res) => {
   .then(dbProductData => {
     //if product to destroy is not found
     if (!dbProductData) {
-      rs.status(404).json({message: 'No product found'})
+      res.status(404).json({message: 'No product found'})
       // console.log("no product found")
       return;
     }
