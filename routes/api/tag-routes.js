@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { toDefaultValue } = require('sequelize/types/lib/utils');
+// const { toDefaultValue } = require('sequelize/types/lib/utils');
 const { Tag, Product, ProductTag } = require('../../models');
 
 // The `/api/tags` endpoint
@@ -24,8 +24,8 @@ router.get('/', (req, res) => {
     .then((dbTagData) => {
       //if data found send message
       if (!dbTagData) {
-        res.status(404)
-        console.log('no tag found')
+        res.status(404).json({message: 'No tag found'})
+        // console.log('no tag found')
         return;
       }
       //else if found 
@@ -61,7 +61,7 @@ router.get('/:id', (req, res) => {
     //if data found send message
     if (!dbTagData) {
       res.status(404)
-      console.log('no tag found')
+      // console.log('no tag found')
       return;
     }
     //else if found 
@@ -103,8 +103,8 @@ router.put('/:id', (req, res) => {
   .then((dbTagData) => {
     //if data found send message
     if (!dbTagData) {
-      res.status(404)
-      console.log('no tag found')
+      res.status(404).json({message: 'No tag found'})
+      // console.log('no tag found')
       return;
     }
     //else if found 
@@ -130,8 +130,8 @@ router.delete('/:id', (req, res) => {
   .then((dbTagData) => {
     //if data found send message
     if (!dbTagData) {
-      res.status(404)
-      console.log('no tag found')
+      res.status(404).json({message: 'No tag found'})
+      // console.log('no tag found')
       return;
     }
     //else if found 

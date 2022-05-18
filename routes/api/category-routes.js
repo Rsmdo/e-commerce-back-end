@@ -19,9 +19,9 @@ router.get('/', (req, res) => {
   .then((dbCatData) => {
     //if no data found return a 404 (no cat found)
     if (!dbCatData) {
-      res.status(404)
+      res.status(404).json({message: 'No category found'})
       //may change this to display message in json
-      console.log("no categories found")
+      // console.log("no categories found")
       return;
     }
     res.json(dbCatData);
@@ -52,9 +52,9 @@ router.get('/:id', (req, res) => {
   .then((dbCatData) => {
     //if no data found return a 404 (no cat found)
     if (!dbCatData) {
-      res.status(404)
+      res.status(404).json({message: 'No category found'})
       //may change this to display message in json
-      console.log("no categories found")
+      // console.log("no categories found")
       return;
     }
     res.json(dbCatData);
@@ -94,9 +94,9 @@ router.put('/:id', (req, res) => {
     .then((dbCatData) => {
       //if no data found return a 404 (no cat found)
       if (!dbCatData) {
-        res.status(404)
+        res.status(404).json({message: 'No category found'})
         //may change this to display message in json
-        console.log("no categories found")
+        // console.log("no categories found")
         return;
       }
       res.json(dbCatData);
@@ -120,9 +120,9 @@ router.delete('/:id', (req, res) => {
   .then((dbCatData) => {
     //if no data found return a 404 (no cat found)
     if (!dbCatData) {
-      res.status(404)
+      res.status(404).json({message: 'No category found'})
       //may change this to display message in json
-      console.log("no categories found")
+      // console.log("no categories found")
       return;
     }
     res.json(dbCatData);

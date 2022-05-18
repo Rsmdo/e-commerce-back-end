@@ -59,9 +59,9 @@ router.get('/:id', (req, res) => {
     .then((dbProductData) => {
       //if the id searched is not found 
       if (!dbProductData) {
-        res.status(404)
+        res.status(404).json({message: 'No product found'})
         //returns this can be changed later 
-        console.log("no product found")
+        // console.log("no product found")
         return;
       }
       res.json(dbProductData);
@@ -160,8 +160,8 @@ router.delete('/:id', (req, res) => {
   .then(dbProductData => {
     //if product to destroy is not found
     if (!dbProductData) {
-      rs.status(404)
-      console.log("no product found")
+      rs.status(404).json({message: 'No product found'})
+      // console.log("no product found")
       return;
     }
     res.json(dbProductData);
