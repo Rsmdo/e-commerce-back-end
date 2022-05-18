@@ -60,7 +60,7 @@ router.get('/:id', (req, res) => {
   .then((dbTagData) => {
     //if data found send message
     if (!dbTagData) {
-      res.status(404)
+      res.status(404).json({message: "tag not found"})
       // console.log('no tag found')
       return;
     }
